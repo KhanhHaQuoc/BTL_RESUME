@@ -1,0 +1,33 @@
+.header{
+    height: 150px;
+}
+
+.block-1 {
+    background-color: rgb(255, 240, 248);
+
+}
+
+.block-2 .row{
+    height: 200px;
+}
+
+.block-3{
+    background-color: rgb(255, 240, 248);
+}
+
+.block-3 .row{
+    height: 500px;
+}
+
+.block-5 {
+    background-color: rgb(255, 240, 248);
+}
+
+.intro{
+    padding-top: 150px;
+}
+
+.intro-text{
+    font-size:60px;
+    font-family:'Times New Roman', Times, serif;
+}
