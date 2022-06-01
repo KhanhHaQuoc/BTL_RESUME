@@ -9,28 +9,44 @@
     <link rel="stylesheet" href="./css/style.css"> 
 </head>
 <body>
-    <div class="container">
+    <!-- <div class="container">
         <div class="row bg-white border-bottom fixed-top header">
             <div class="nav justify-content-center">
                 <a class="fs-1 fw-semibold nav-link text-muted  " href="#">DOVILE</a>
             </div>
-        <ul class="nav justify-content-center">
-        <li class="nav-item">
-            <a class="nav-link active fw-light text-decoration-underline text-muted fs-5" aria-current="page" href="#">HOME</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link active fw-light text-decoration-underline text-muted fs-5" href="#">SERVICES</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link active fw-light text-decoration-underline text-muted fs-5" href="#">ABOUT ME</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link active fw-light text-decoration-underline text-muted fs-5" href="#">CONTACT</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link active fw-light text-decoration-underline text-muted fs-5" href="#">BLOG</a>
-        </li>
-        </ul>
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link active fw-light text-decoration-underline text-muted fs-6 py-2 d-inline-block" aria-current="page" href="#">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active fw-light text-decoration-underline text-muted fs-6 py-2 d-inline-block" href="#">SERVICES</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active fw-light text-decoration-underline text-muted fs-6 py-2 d-inline-block" href="#">ABOUT ME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active fw-light text-decoration-underline text-muted fs-6 py-2 d-inline-block" href="#">CONTACT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active fw-light text-decoration-underline text-muted fs-6 py-2 d-inline-block" href="#">BLOG</a>
+                </li>
+            </ul>
         </div>
     </div>
-    
+     -->
+<header class="sticky-top bg-white">
+    <div class="container-fluid py-3">
+        <div class="header-top">
+           <a class="mx-auto" href="./"><img class="logo" src="./image/DOVILE img.svg" alt=""></a>
+        </div>
+        <nav class="header-nav pt-3">
+            <ul class="menu">
+                <li class="menu-item active"><a href="" class="menu-link">HOME</a></li>
+                <li class="menu-item"><a href="" class="menu-link">SERVICES</a></li>
+                <li class="menu-item"><a href="" class="menu-link">ABOUT ME</a></li>
+                <li class="menu-item"><a href="" class="menu-link">CONTACT</a></li>
+                <li class="menu-item"><a href="" class="menu-link">BLOG</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
