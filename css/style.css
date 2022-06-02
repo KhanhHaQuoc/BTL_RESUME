@@ -13,7 +13,9 @@
 }
 
 .block-3 .row{
-    height: 500px;
+    height: auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 .block-5 {
@@ -27,6 +29,10 @@
 .intro-text{
     font-size:60px;
     font-family:'Times New Roman', Times, serif;
+}
+.heading-text {
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
 }
 /* Header-css */
 .logo{
