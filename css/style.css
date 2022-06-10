@@ -69,3 +69,9 @@
     height: 304px;
 
 }
+/* blog css */
+.blog-container{
+    display: grid;
+    gap:2rem;
+    grid-template-columns:repeat(auto-fill,minmax(25rem,1fr)) ;
+}
