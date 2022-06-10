@@ -18,12 +18,11 @@
             <i class="bi bi-twitter" ></i>
         </button>
     </div>
-    
     <div>
         <a class="btn btn-link text-muted fs-5 d-flex justify-content-center " href="#" >
             Terms of service
         </a>
-        <a class="text-decoration-none text-muted fs-5 d-flex justify-content-center">
+        <a class="text-decoration-none text-muted fs-5 mb-5 d-flex justify-content-center">
             Powered by Minh & Khanh
         </button>
 
