@@ -8,13 +8,13 @@
     </div>
 
     <div class="d-flex justify-content-center">
-        <a class="btn btn-link text-muted fs-3 me-3" href="https://www.facebook.com" role="button">
+        <a class="btn btn-link text-muted fs-3 me-3" href="https://www.facebook.com" target="_blank" role="button">
             <i class="bi bi-facebook"></i>
         </a>
-        <a class="btn btn-link text-muted fs-3 me-3" href="https://www.instagram.com" role="button">
+        <a class="btn btn-link text-muted fs-3 me-3" href="https://www.instagram.com" target="_blank" role="button">
             <i class="bi bi-instagram" ></i>
         </button>
-        <a class="btn btn-link text-muted fs-3 me-3" href="https://twitter.com" role="button">
+        <a class="btn btn-link text-muted fs-3 me-3" href="https://twitter.com" target="_blank" role="button">
             <i class="bi bi-twitter" ></i>
         </button>
     </div>

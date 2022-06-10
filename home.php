@@ -1,7 +1,39 @@
 <?php
-include "./header.php";
+include "./function.php";
+
+$members = getMembersInfo();
+$testimonials = getTestimonial();
+$homes = getHome();
 ?>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIKHA Social Media Influencer Business</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+</head>
+<body>
+<header class="sticky-top bg-white border-bottom">
+    <div class="container-fluid py-3">
+        <div class="header-top">
+           <a class="mx-auto text-decoration-none text-muted fs-1" href="./">MIKHA</a>
+        </div>
+        <nav class="header-nav pt-3">
+            <ul class="menu">
+                <li class="menu-item active"><a href="home.php" class="menu-link">HOME</a></li>
+                <li class="menu-item"><a href="services.php" class="menu-link">SERVICES</a></li>
+                <li class="menu-item"><a href="about.php" class="menu-link">ABOUT US</a></li>
+                <li class="menu-item"><a href="contact.php" class="menu-link">CONTACT</a></li>
+                <li class="menu-item"><a href="blog.php" class="menu-link">BLOG</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
  <div class="intro">
      <div class="container-fluid block-1 py-2">
          <div class="container">
@@ -11,7 +43,7 @@ include "./header.php";
                          <p class=" intro-text">Hello, so good to see you!</p>
                          <p class=" fw-light fs-5 mt-5"> We help small and medium-sized businesses grow their audience and brand recognition through social media.</p>
 
-                    <button type="button" class="btn btn-dark btn-lg mt-5 mb-5">Contact us</button></div>
+                    <a href="./Contact.php" class="btn btn-dark btn-lg mt-5 mb-5">Contact us</a></div>
 
                  <div class="col-12 col-sm-5">
                      <img class="img-fluid" src="./image/ava.avif" alt="">
@@ -44,17 +76,23 @@ include "./header.php";
      </div>
      <div class="container-fluid block-4 py-2">
          <div class="container">
+            <?php
+            foreach ($members as $member) {
+            ?>
              <div class="row align-items-center justify-content-between">
                 <div class="col-12 col-sm-5">
-                     <img class="img-fluid" src="./image/ava2.avif" alt="">
+                     <img class="img-fluid mb-3" src="<?= $member['image'] ?>" alt="">
                  </div> 
                  <div class="col-12 col-sm-5">
                    
-                         <p class=" intro-text">Services</p>
-                         <p class="fw-light fs-5 mt-5">From campaign planning and consultation to content creation and extended social media campaigning, I'm here to help your brand sound like you online.</p>
+                         <p class=" intro-text"><?= $member['fullname'] ?></p>
+                         <p class="fw-light fs-5 mt-5"><?= $member['description'] ?></p>
 
-                    <button type="button" class="btn btn-dark btn-lg mt-5">Read more</button></div>
+                    <a href="./About.php" class="btn btn-dark btn-lg mt-5">About us</a></div>
              </div>
+            <?php
+            }
+            ?>
          </div>
      </div>
         <div class="container-fluid block-5 py-2">
@@ -66,29 +104,19 @@ include "./header.php";
                 </div>
             </div>
             <div class="container">
+                <?php
+                foreach ($homes as $home) {
+                ?>
                 <div class="row text-start d-flex justify-content-center ">
                     <div class="col-12 col-sm-4 mt-5 mb-5">
-                        <p class="heading-text">Create content that's visually pleasing?</p>
-                        <p>It's not enough to just create an account and post something. Your content needs to represents your brand and showcase your mission and values. And you want to do it in a way that stops the user in their tracks – with beautiful content.</p>
-                    </div>
-                    <div class="col-12 col-sm-4 mt-5 mb-5">
-                        <p class="heading-text">Grow your brand and turn your audience into paying clients?</p>
-                        <p>Selling online is different from traditional sales channels. But most of all, you need to gain your audience's trust if you want them to part with their dollar.</p>
+                        <p class="heading-text"><?= $home['questions'] ?></p>
+                        <p><?= $home['answers']?></p>
                     </div>
                 </div>
+                <?php
+                }
+                ?>
             </div>    
-            <div class="container">
-                <div class="row text-start d-flex justify-content-center ">
-                    <div class="col-12 col-sm-4 mt-5 mb-5">
-                        <p class="heading-text">Get hold of your dream clients online?</p>
-                        <p>Everybody is online, so why shouldn't you try to reach out to them? With a bigger reach than ever before, the world really is your oyster when it comes to selling online.</p>
-                    </div>
-                    <div class="col-12 col-sm-4 mt-5 mb-5">
-                        <p class="heading-text">Invest in your brand and take your business to the next level?</p>
-                        <p>Social media marketing is much more than simply posting about an upcoming sale. With the right approach, you can exponentially grow your bottom line.</p>
-                    </div>
-                </div>
-            </div>
         </div>
      <div class="container-fluid block-6 py-2">
          <div class="container">
@@ -98,7 +126,7 @@ include "./header.php";
                          <p class=" intro-text">My Blog</p>
                          <p class="fw-light fs-5 mt-5"> I'll let you in on some trade secrets and share my top tips on how to successfully promote your brand online.</p>
 
-                    <button type="button" class="btn btn-dark btn-lg mt-5">Read Blog</button></div>
+                    <a href="./Blog.php" class="btn btn-dark btn-lg mt-5">Read Blog</a></div>
 
                  <div class="col-12 col-sm-5">
                      <img class="img-fluid" src="./image/block6.avif" alt="">
@@ -109,45 +137,30 @@ include "./header.php";
      <div class="container-fluid block-1 py-2">
      <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
   <div class="carousel-inner container">
-    <div class="carousel-item active" data-bs-interval="10000">
+    <?php
+        $index = 1;
+        foreach ($testimonials as $testimonial) {
+    ?>
+
+    <div class="carousel-item <?= $index == 1 ? "active" : "" ?>" data-bs-interval="10000">
       <div class="row align-items-center">
           <div class="col-md-6 carousel-img">
-          <img class="img-fluid" src="./image/carousel1.avif" class="d-block w-100" alt="...">
+          <img class="img-fluid" src="<?= $testimonial['picture'] ?>" class="d-block w-100" alt="...">
           </div>
           <div class="col-md-6">
               <h4>Testimonials</h4>
-              <p >”We went from having zero online presence to dominating our niche on Google. As a technophobe I never thought we could do it, but currently social media amounts for the majority of our sales.”</p>
-              <p class="fw-bold" >Nicollas Ductorn</p>
-              <p class="fst-italic">Director of Corporate MarketingForge Inc.</p>
+              <p ><?= $testimonial['quotes'] ?></p>
+              <p class="fw-bold" ><?= $testimonial['full_name'] ?></p>
+              <p class="fst-italic"><?= $testimonial['work'] ?></p>
           </div>
       </div>
     </div>
-    <div class="carousel-item" data-bs-interval="10000">
-      <div class="row align-items-center">
-          <div class="col-md-6 carousel-img">
-          <img class="img-fluid" src="./image/carousel2.avif" class="d-block w-100" alt="...">
-          </div>
-          <div class="col-md-6">
-              <h4>Testimonials</h4>
-              <p >”I was sick of wasting money on seemingly useless and empty Facebook campaigns, but thanks to Dovile, we were able to turn our marketing budget around and start making some real money.”</p>
-              <p class="fw-bold" >Jack Smith</p>
-              <p class="fst-italic">CEO of FruitJuices Inc.</p>
-          </div>
-      </div>
-    </div>
-    <div class="carousel-item" data-bs-interval="10000">
-      <div class="row align-items-center">
-          <div class="col-md-6 carousel-img">
-          <img class="img-fluid" src="./image/carousel3.avif" class="d-block w-100" alt="...">
-          </div>
-          <div class="col-md-6">
-              <h4>Testimonials</h4>
-              <p >”We'd worked with a handful of influencer teams before but had grown sceptical due to the high costs and low returns. Dovile proved that social media can be a part of your marketing mix. ”</p>
-              <p class="fw-bold" >Sharla McKinnen</p>
-              <p class="fst-italic">Marketing Manager of McKinnen Properties Inc.</p>
-          </div>
-      </div>
-    </div>
+    <?php
+        $index++;
+        }
+    ?>
+    
+    
   </div>
   <div class="carousel-indicators position-static" >
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>

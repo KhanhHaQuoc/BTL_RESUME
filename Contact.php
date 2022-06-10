@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dovile Social Media Influencer Business Website Template</title>
+    <title>MIKHA Social Media Influencer Business</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css"> 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
@@ -13,7 +13,7 @@
 <header class="sticky-top bg-white border-bottom">
     <div class="container-fluid py-3">
         <div class="header-top">
-           <a class="mx-auto" href="./"><img class="logo" src="./image/DOVILE img.svg" alt=""></a>
+           <a class="mx-auto text-decoration-none text-muted fs-1" href="./">MIKHA</a>
         </div>
         <nav class="header-nav pt-3">
             <ul class="menu">
