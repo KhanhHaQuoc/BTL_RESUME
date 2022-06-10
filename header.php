@@ -19,7 +19,7 @@
             <ul class="menu">
                 <li class="menu-item active"><a href="home.php" class="menu-link">HOME</a></li>
                 <li class="menu-item"><a href="services.php" class="menu-link">SERVICES</a></li>
-                <li class="menu-item"><a href="about.php" class="menu-link">ABOUT ME</a></li>
+                <li class="menu-item"><a href="about.php" class="menu-link">ABOUT US</a></li>
                 <li class="menu-item"><a href="contact.php" class="menu-link">CONTACT</a></li>
                 <li class="menu-item"><a href="blog.php" class="menu-link">BLOG</a></li>
             </ul>

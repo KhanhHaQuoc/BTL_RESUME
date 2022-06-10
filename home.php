@@ -8,10 +8,10 @@ include "./header.php";
              <div class="row align-items-center justify-content-between">
                  <div class="col-12 col-sm-5">
                    
-                         <p class="text-center intro-text">Hello, so good to see you!</p>
-                         <p class="text-center fw-light fs-5 mt-5"> I help small and medium-sized businesses grow their audience and brand recognition through social media.</p>
+                         <p class=" intro-text">Hello, so good to see you!</p>
+                         <p class=" fw-light fs-5 mt-5"> We help small and medium-sized businesses grow their audience and brand recognition through social media.</p>
 
-                    <button type="button" class="btn btn-dark btn-lg mt-5 mb-5">Contact me</button></div>
+                    <button type="button" class="btn btn-dark btn-lg mt-5 mb-5">Contact us</button></div>
 
                  <div class="col-12 col-sm-5">
                      <img class="img-fluid" src="./image/ava.avif" alt="">
@@ -34,8 +34,8 @@ include "./header.php";
              <div class="row d-flex justify-content-center align-items-center">
                  <div class="col-7 ">
           
-                         <p class="intro-text text-center">My name is Dovile</p>
-                         <p class="fw-light fs-5 text-center">I'm your new social media bestie. My mission is to help small and medium-sized businesses grow their audience and brand recognition through social media. To do that, I believe it's paramount to create a committed and genuine community that has a positive influence on people’s lives beyond the online sphere. My goal is to help you understand the power of social media and create connections that go beyond the internet.</p>
+                         <p class="intro-text text-center">We are Minh and Khánh</p>
+                         <p class="fw-light fs-5 text-center">We are your new social media bestie. Our mission is to help small and medium-sized businesses grow their audience and brand recognition through social media. To do that, We believe it's paramount to create a committed and genuine community that has a positive influence on people’s lives beyond the online sphere. Our goal is to help you understand the power of social media and create connections that go beyond the internet.</p>
 
 
                  </div>
