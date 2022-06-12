@@ -70,8 +70,8 @@
 
 }
 /* blog css */
-.blog-container{
-    display: grid;
-    gap:2rem;
-    grid-template-columns:repeat(auto-fill,minmax(25rem,1fr)) ;
+.card-img-top{
+    width: 100%;
+    aspect-ratio: 2/1;
+    object-fit: cover;
 }

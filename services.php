@@ -1,3 +1,8 @@
+<?php
+include "./function.php";
+$testimonials = getTestimonial();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

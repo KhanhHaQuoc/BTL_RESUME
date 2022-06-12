@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -75,8 +76,8 @@
                  </div> 
                  <div class="col-12 col-sm-5">
                    
-                         <p class=" intro-text">My blog</p>
-                         <p class="fw-light fs-5 mt-5">I'll let you in on some trade secrets and share my top tips on how to successfully promote your brand online.</p>
+                         <p class=" intro-text">Our blog</p>
+                         <p class="fw-light fs-5 mt-5">We will let you in on some trade secrets and share my top tips on how to successfully promote your brand online.</p>
 
                     <a href="./Blog.php" class="btn btn-dark btn-lg mt-5">Read blog</a></div>
              </div>

@@ -104,18 +104,18 @@ $homes = getHome();
                 </div>
             </div>
             <div class="container">
+                <div class="row justify-content-center ">
                 <?php
                 foreach ($homes as $home) {
                 ?>
-                <div class="row text-start d-flex justify-content-center ">
-                    <div class="col-12 col-sm-4 mt-5 mb-5">
+                    <div class=" col-md-5 mt-5 mb-5">
                         <p class="heading-text"><?= $home['questions'] ?></p>
                         <p><?= $home['answers']?></p>
                     </div>
-                </div>
-                <?php
+                    <?php
                 }
                 ?>
+                </div>
             </div>    
         </div>
      <div class="container-fluid block-6 py-2">
@@ -123,8 +123,8 @@ $homes = getHome();
              <div class="row align-items-center justify-content-between">
                  <div class="col-12 col-sm-5">
                    
-                         <p class=" intro-text">My Blog</p>
-                         <p class="fw-light fs-5 mt-5"> I'll let you in on some trade secrets and share my top tips on how to successfully promote your brand online.</p>
+                         <p class=" intro-text">Our Blog</p>
+                         <p class="fw-light fs-5 mt-5"> We will let you in on some trade secrets and share my top tips on how to successfully promote your brand online.</p>
 
                     <a href="./Blog.php" class="btn btn-dark btn-lg mt-5">Read Blog</a></div>
 

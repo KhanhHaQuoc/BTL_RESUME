@@ -1,6 +1,12 @@
-<?php
-  include "./function.php";
-  $posts = getPosts();
+<?php 
+    include('function.php');
+
+    if(isset($_GET['id']) && !empty($_GET['id'])){
+        $id = $_GET['id'];
+    }
+    
+    $post = getPostByID($id);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,33 +36,27 @@
         </nav>
     </div>
 </header>
-<div class="container">
-<div class="blog-container">
-  <div class="row">
-    <?php
-    foreach($posts as $post){
-    ?>
-    <div class="col-12 col-md-6">
-      <div class="card">
-          <a href="post.php?id=<?=$post['id']?>">
-            <img src="<?=$post['post_picture']?>" class="card-img-top img-fluid" alt="...">
-          </a>
-          <div class="card-body">
-            <h5 class="card-title">
-                <a class="text-decoration-none text-secondary" href="post.php?id=<?=$post['id']?>"><?=$post['post_title']?></a>
-            </h5>
-            <p class="card-text"><?=$post['post_description']?></p>
-            <p><?=$post['post_date']?></p>
-          </div>
+<!--Main content -->
+<div class="container-fluid">
+    <!-- Lap o day -->
+    <div class="row my-2">
+        <div class="col-md-8 mx-auto ">
+            <div>
+                <div class="text-center">
+                    <img class="img-fluid" src="<?php echo $post['post_picture'];?>" alt="">
+                </div>
+                <h5 class="fs-1 mt-2 mb-3">
+                    <?php echo $post['post_title'];?>
+                </h5>
+                <p class="fs-2 fst-italic"><?php echo $post['post_description'];?></p>
+                <p class=" fst-italic"><?php echo $post['post_date'];?></p>
+                <p><?php echo $post['post_body'];?></p>
+            </div>
         </div>
     </div>
-    <?php
-    }
-    ?>
-  </div> 
-</div>
+    <!-- Ket thuc o day-->
 </div>
 
-<?php
-include "./footer.php";
+<?php 
+    include('footer.php');
 ?>
