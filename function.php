@@ -105,5 +105,29 @@ function getPostByID($id){
     mysqli_close($conn);
     return $rows; //Trả về 1 mảng
 }
+
+// Lập trình hướng thủ tục: hướng tới chức năng > viết dạng HÀM
+
+    // Tôi cần 1 hàm để NHẬN dữ liệu từ FORM và lưu vào CSDL
+    function addContact($full_name, $email,$message){
+        // 1. Kết nối tới CSDL
+        $conn = mysqli_connect("localhost","root","", "btl_cv");
+        if(!$conn){
+            die("Không thể kết nối tới DB Server");
+        }
+
+        // 2. Thực hiện TRUY VẤN
+        $sql = "INSERT INTO contact (full_name,email,messages) VALUES ('$full_name', '$email','$message')";
+
+        if(mysqli_query($conn, $sql)){
+            //Trường hợp thực hiện lệnh khác SELECT > Kết quả trả về TRUE ko?
+            return true;
+        }else{
+            return false;
+        }
+
+        // 3. Dong ket noi
+        mysqli_close($conn);
+    }
 ?>
 

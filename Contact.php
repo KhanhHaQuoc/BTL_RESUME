@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,34 +30,36 @@
 </header>
 
 <div class="container-fluid block-6 py-2">
-         <div class="container">
-             <div class="row align-items-center justify-content-between">
-                 <div class="col-12 col-sm-5">
-                   
-                         <p class=" intro-text">Leave me a message</p>
-                        <div class="form-floating mb-3">
-                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-                            <label for="floatingTextarea">Name</label>
-                        </div>
+            <div class="container">
 
-                         <div class="form-floating mb-3">
-                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                            <label for="floatingInput">Your email*</label>
+                    <div class="row align-items-center justify-content-between">
+                        <div class="col-12 col-sm-5">
+                            <form method="POST" action="AddContact.php" >
+                                <h1 class=" intro-text mb-5">Leave me a message</h1>
+                                <div class="form-floating mb-3 w-100">
+                                    <input type="text" class="form-control" id="floatingInput" name="txtName" placeholder="Username">
+                                    <label for="floatingInput">Name</label>
+                                </div>
+                                <div class="form-floating mb-3 w-100">
+                                    <input type="email" class="form-control" id="floatingPassword" name="txtEmail" placeholder="Password">
+                                    <label for="floatingPassword">Email</label>
+                                </div>
+                                <div class="form-floating mb-3 w-100">
+                                    <textarea name="txtMessage" id="floatingPassword2" style="height: 100px" placeholder="Message" class="form-control"></textarea>
+                                    <!-- <input type="text" class="form-control" id="floatingPassword2" name="txtMessage" placeholder="Password"> -->
+                                    <label for="floatingPassword2">Message</label>
+                                </div>
+                                <button name="btnSubmit" class=" btn btn-lg btn-dark" type="submit">Submit</button>
+                            </form>
                         </div>
-                        
-                        <div class="form-floating">
-                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-                            <label for="floatingTextarea2">Message*</label>
+                        <div class="col-12 col-sm-5">
+                            <img class="img-fluid" src="./image/contact.webp" alt="">
                         </div>
+                    </div>
 
-                    <button type="button" class="btn btn-dark btn-lg mt-5 mb-3">Submit</button></div>
-
-                 <div class="col-12 col-sm-5">
-                     <img class="img-fluid" src="./image/contact.webp" alt="">
-                 </div>
-             </div>
-         </div>
-     </div>
+                
+            </div>
+</div>
 
  <?php
 include "./footer.php";
