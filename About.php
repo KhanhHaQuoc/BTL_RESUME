@@ -35,27 +35,57 @@
                  <div class="col-12 col-sm-5">
                    
                          <p class="text-center intro-text">So, who we are?</p>
-                         <p class="text-center fw-light fs-5 mt-5">We arr your new social media bestie. Our mission is to help small and medium-sized businesses grow their audience and brand recognition through social media. Our goal is to help you understand the power of social media and create connections that go beyond the internet.</p>
+                         <p class="text-center fw-light fs-5 mt-5">We are your new social media bestie. Our mission is to help small and medium-sized businesses grow their audience and brand recognition through social media. Our goal is to help you understand the power of social media and create connections that go beyond the internet.</p>
 
                     <a href="./Contact.php" class="btn btn-dark btn-lg mt-5 mb-5">Contact me</a></div>
 
                  <div class="col-12 col-sm-5">
-                     <img class="img-fluid" src="./image/ava.avif" alt="">
+                     <img class="img-fluid" src="./image/khanh.jpg" alt="">
                  </div>
              </div>
          </div>
      </div>
+     
      <div class="container-fluid block-2 py-2">
          <div class="container">
              <div class="row align-items-center">
-                 <div class="col-12 col-sm-3 text-center fs-1">Featured</div>
-                 <div class="col-12 col-sm-3 text-center fs-1">Lani Haw</div>
-                 <div class="col-12 col-sm-3 text-center fs-1">Deon Five</div>
-                 <div class="col-12 col-sm-3 text-center fs-1">KNOXEMUS</div>
+                 <div class="col-12 col-sm-3 text-center fs-1">Facebook</div>
+                 <div class="col-12 col-sm-3 text-center fs-1">Twitter</div>
+                 <div class="col-12 col-sm-3 text-center fs-1">YouTube</div>
+                 <div class="col-12 col-sm-3 text-center fs-1">Instagram</div>
              </div>
          </div>
      </div>
-     <div class="container-fluid block-3 py-2">
+     
+     <div class="container-fluid block-1 py-2">
+         <div class="container">
+             <div class="row align-items-center justify-content-between">
+                 <div class="col-12 col-sm-5">
+                   
+                         <p class="text-center intro-text">What we do</p>
+                         <p class="text-center fw-light fs-5 mt-5">When it comes to social media marketing, MIKHA is my #1 go-to website. If you’re serious about your business, you need MIKHA</p>
+
+                    <a href="./Contact.php" class="btn btn-dark btn-lg mt-5 mb-5">Contact me</a></div>
+
+                 <div class="col-12 col-sm-5">
+                     <img class="img-fluid" src="./image/minh.jpg" alt="">
+                 </div>
+             </div>
+         </div>
+     </div>
+
+     <div class="container-fluid block-2 py-2">
+         <div class="container">
+             <div class="row align-items-center">
+                 <div class="col-12 col-sm-3 text-center fs-1">Facebook</div>
+                 <div class="col-12 col-sm-3 text-center fs-1">Twitter</div>
+                 <div class="col-12 col-sm-3 text-center fs-1">YouTube</div>
+                 <div class="col-12 col-sm-3 text-center fs-1">Instagram</div>
+             </div>
+         </div>
+     </div>
+
+     <div class="container-fluid block-1 py-2">
          <div class="container">
              <div class="row d-flex justify-content-center align-items-center">
                  <div class="col-7 ">
@@ -68,7 +98,7 @@
              </div>
          </div>
      </div>
-     <div class="container-fluid block-4 py-2">
+     <div class="container-fluid  py-2">
          <div class="container">
              <div class="row align-items-center justify-content-between">
                 <div class="col-12 col-sm-5">
