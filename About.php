@@ -34,8 +34,8 @@
              <div class="row align-items-center justify-content-between">
                  <div class="col-12 col-sm-5">
                    
-                         <p class="text-center intro-text">So, who am I?</p>
-                         <p class="text-center fw-light fs-5 mt-5">I'm your new social media bestie. My mission is to help small and medium-sized businesses grow their audience and brand recognition through social media. My goal is to help you understand the power of social media and create connections that go beyond the internet.</p>
+                         <p class="text-center intro-text">So, who we are?</p>
+                         <p class="text-center fw-light fs-5 mt-5">We arr your new social media bestie. Our mission is to help small and medium-sized businesses grow their audience and brand recognition through social media. Our goal is to help you understand the power of social media and create connections that go beyond the internet.</p>
 
                     <a href="./Contact.php" class="btn btn-dark btn-lg mt-5 mb-5">Contact me</a></div>
 
@@ -61,7 +61,7 @@
                  <div class="col-7 ">
           
                          <p class="intro-text text-center">Changing the digital world</p>
-                         <p class="fw-light fs-5 text-center">I believe it's paramount to create a committed and genuine community that has a positive influence on people’s lives beyond the online sphere. With more people online than ever before, the competition for attention is fierce, and you have to work hard to appeal to the masses. That's why it's my goal to help you understand the power of social media and create connections that go beyond the internet.</p>
+                         <p class="fw-light fs-5 text-center">We believe it's paramount to create a committed and genuine community that has a positive influence on people’s lives beyond the online sphere. With more people online than ever before, the competition for attention is fierce, and you have to work hard to appeal to the masses. That's why it's our goal to help you understand the power of social media and create connections that go beyond the internet.</p>
 
 
                  </div>

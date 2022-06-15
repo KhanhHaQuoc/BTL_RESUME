@@ -19,7 +19,7 @@
         <ul class="nav nav-pills flex-column mb-auto py-4">
             <li class="nav-item">
                 <a href="#" class="nav-link active" aria-current="page">
-                About
+                Members
                 </a>
             </li>
             <li>

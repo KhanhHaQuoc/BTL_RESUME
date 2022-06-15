@@ -3,7 +3,7 @@ include "./function.php";
 
 $members = getMembersInfo();
 $testimonials = getTestimonial();
-$homes = getHome();
+$intros = getIntro();
 ?>
 
 <!DOCTYPE html>
@@ -46,7 +46,7 @@ $homes = getHome();
                     <a href="./Contact.php" class="btn btn-dark btn-lg mt-5 mb-5">Contact us</a></div>
 
                  <div class="col-12 col-sm-5">
-                     <img class="img-fluid" src="./image/ava.avif" alt="">
+                     <img class="img-fluid" src="./image/hello.jpg" alt="">
                  </div>
              </div>
          </div>
@@ -106,11 +106,11 @@ $homes = getHome();
             <div class="container">
                 <div class="row justify-content-center ">
                 <?php
-                foreach ($homes as $home) {
+                foreach ($intros as $intro) {
                 ?>
                     <div class=" col-md-5 mt-5 mb-5">
-                        <p class="heading-text"><?= $home['questions'] ?></p>
-                        <p><?= $home['answers']?></p>
+                        <p class="heading-text"><?= $intro['questions'] ?></p>
+                        <p><?= $intro['answers']?></p>
                     </div>
                     <?php
                 }
@@ -129,7 +129,7 @@ $homes = getHome();
                     <a href="./Blog.php" class="btn btn-dark btn-lg mt-5">Read Blog</a></div>
 
                  <div class="col-12 col-sm-5">
-                     <img class="img-fluid" src="./image/block6.avif" alt="">
+                     <img class="img-fluid" src="./image/blog.webp" alt="">
                  </div>
              </div>
          </div>

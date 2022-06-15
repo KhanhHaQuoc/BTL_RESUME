@@ -43,7 +43,7 @@ function getTestimonial(){
     return $data;
 }
 
-function getHome(){
+function getIntro(){
     // 1. Kết nối tới CSDL
     $conn = mysqli_connect("localhost","root","", "btl_cv");
     if(!$conn){
@@ -51,7 +51,7 @@ function getHome(){
     }
 
     // 2. Thực hiện TRUY VẤN
-    $sql = 'SELECT * FROM home'; //Vì nó là câu lệnh SELECT
+    $sql = 'SELECT * FROM intro'; //Vì nó là câu lệnh SELECT
     //mysqli_query trả về 1 tập kết quả
     $result = mysqli_query($conn, $sql);
     $data =[];

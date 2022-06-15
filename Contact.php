@@ -35,7 +35,7 @@
                     <div class="row align-items-center justify-content-between">
                         <div class="col-12 col-sm-5">
                             <form method="POST" action="AddContact.php" >
-                                <h1 class=" intro-text mb-5">Leave me a message</h1>
+                                <h1 class=" intro-text mb-5">Leave us a message</h1>
                                 <div class="form-floating mb-3 w-100">
                                     <input type="text" class="form-control" id="floatingInput" name="txtName" placeholder="Username">
                                     <label for="floatingInput">Name</label>
