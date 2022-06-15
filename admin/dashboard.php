@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 </head>
 <body?>
-    <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px; height:100vh;">
+    <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px; height: 100%;">
         <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
             <svg class="bi pe-none me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
             <span class="fs-4">Sidebar</span>
@@ -18,23 +18,28 @@
 
         <ul class="nav nav-pills flex-column mb-auto py-4">
             <li class="nav-item">
-                <a href="#" class="nav-link active" aria-current="page">
+                <a href="./member.php" class="nav-link active" aria-current="page">
                 Members
                 </a>
             </li>
             <li>
-                <a href="#" class="nav-link text-white">
+                <a href="./blog.php" class="nav-link text-white">
                 Blog
                 </a>
             </li>
             <li>
-                <a href="#" class="nav-link text-white">
+                <a href="./testimonial.php" class="nav-link text-white">
                 Testimonials
                 </a>
             </li>
             <li>
-                <a href="#" class="nav-link text-white">
+                <a href="./contact.php" class="nav-link text-white">
                 Contact
+                </a>
+            </li>
+            <li>
+                <a href="./intro.php" class="nav-link text-white">
+                Intro
                 </a>
             </li>
         </ul>

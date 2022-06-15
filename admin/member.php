@@ -1,6 +1,6 @@
 <?php
 include "function.php";
-$contacts = getContact();
+$members = getMember();
 ?>
 
 <!DOCTYPE html>
@@ -23,7 +23,7 @@ $contacts = getContact();
             </a>
             <ul class="nav nav-pills flex-column mb-auto py-4">
                 <li class="nav-item">
-                    <a href="./member.php" class="nav-link text-white" aria-current="page">
+                    <a href="./member.php" class="nav-link active" aria-current="page">
                     Members
                     </a>
                 </li>
@@ -38,7 +38,7 @@ $contacts = getContact();
                     </a>
                 </li>
                 <li>
-                    <a href="./contact.php" class="nav-link active">
+                    <a href="./contact.php" class="nav-link text-white">
                     Contact
                     </a>
                 </li>
@@ -62,29 +62,35 @@ $contacts = getContact();
         <div class="flex-grow-1">
             <div class="p-5">
                 <h5>
-                    Contact Manage
+                    Member Manage
                 </h5>
-                <a href="" class="btn btn-secondary my-2" >Add a new Contact</a>
+                <a href="" class="btn btn-secondary my-2" >Add a new member</a>
                 <table class="table">
                     <thead class="bg-secondary text-white">
                         <tr>
                             <th scope="col">#</th>
+                            <th scope="col">User name</th>
+                            <th scope="col">Password</th>
                             <th scope="col">Full Name</th>
+                            <th scope="col">Description</th>
                             <th scope="col">Email</th>
-                            <th scope="col">Message</th>
+                            <th scope="col">Avatar</th>
                             <th scope="col"></th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php
                         $index=1;
-                        foreach ($contacts as $contact) {
+                        foreach ($members as $member) {
                         ?>
                         <tr>
                             <th scope="row"><?= $index ?></th>
-                            <td><?=$contact['full_name']?></td>
-                            <td><?=$contact['email']?></td>
-                            <td><?=$contact['messages']?></td>
+                            <td><?=$member['user_name']?></td>
+                            <td><?=$member['password']?></td>
+                            <td><?=$member['fullname']?></td>
+                            <td><?=$member['description']?></td>
+                            <td><?=$member['email']?></td>
+                            <td><?=$member['image']?></td>
                             <td class="d-flex">
                                 <a href="#"><i class="bi bi-pencil-square"></i></a>
                                 <a href="#"><i class="bi bi-trash"></i></a>

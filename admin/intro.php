@@ -1,6 +1,6 @@
 <?php
 include "function.php";
-$contacts = getContact();
+$intros = getIntro();
 ?>
 
 <!DOCTYPE html>
@@ -38,12 +38,12 @@ $contacts = getContact();
                     </a>
                 </li>
                 <li>
-                    <a href="./contact.php" class="nav-link active">
+                    <a href="./contact.php" class="nav-link text-white">
                     Contact
                     </a>
                 </li>
                 <li>
-                    <a href="./intro.php" class="nav-link text-white">
+                    <a href="./intro.php" class="nav-link active">
                     Intro
                     </a>
                 </li>
@@ -62,9 +62,9 @@ $contacts = getContact();
         <div class="flex-grow-1">
             <div class="p-5">
                 <h5>
-                    Contact Manage
+                    Intro Manage
                 </h5>
-                <a href="" class="btn btn-secondary my-2" >Add a new Contact</a>
+                <a href="" class="btn btn-secondary my-2" >Add a new intro</a>
                 <table class="table">
                     <thead class="bg-secondary text-white">
                         <tr>
@@ -78,13 +78,13 @@ $contacts = getContact();
                     <tbody>
                         <?php
                         $index=1;
-                        foreach ($contacts as $contact) {
+                        foreach ($intros as $intro) {
                         ?>
                         <tr>
                             <th scope="row"><?= $index ?></th>
-                            <td><?=$contact['full_name']?></td>
-                            <td><?=$contact['email']?></td>
-                            <td><?=$contact['messages']?></td>
+                            <td><?=$intro['id']?></td>
+                            <td><?=$intro['questions']?></td>
+                            <td><?=$intro['answers']?></td>
                             <td class="d-flex">
                                 <a href="#"><i class="bi bi-pencil-square"></i></a>
                                 <a href="#"><i class="bi bi-trash"></i></a>
