@@ -16,7 +16,7 @@ $members = getMember();
 </head>
 <body?>
     <div class="d-flex">
-        <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px; height:100vh;">
+        <div class="d-flex sticky-top flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px; height:100vh;">
             <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
                 <svg class="bi pe-none me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
                 <span class="fs-4">Sidebar</span>
@@ -64,18 +64,20 @@ $members = getMember();
                 <h5>
                     Member Manage
                 </h5>
-                <a href="" class="btn btn-secondary my-2" >Add a new member</a>
+                <a href="./addmember.php" class="btn btn-secondary my-2" >Add a new member</a>
                 <table class="table">
                     <thead class="bg-secondary text-white">
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">User name</th>
-                            <th scope="col">Password</th>
-                            <th scope="col">Full Name</th>
+                            <th scope="col">FullName</th>
                             <th scope="col">Description</th>
                             <th scope="col">Email</th>
                             <th scope="col">Avatar</th>
-                            <th scope="col"></th>
+                            <th scope="col">Phone</th>
+                            <th scope="col">Education</th>
+                            <th scope="col">Birthday</th>
+                            <th scope="col">Edit</th>
+                            <th scope="col">Delete</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -85,15 +87,18 @@ $members = getMember();
                         ?>
                         <tr>
                             <th scope="row"><?= $index ?></th>
-                            <td><?=$member['user_name']?></td>
-                            <td><?=$member['password']?></td>
                             <td><?=$member['fullname']?></td>
                             <td><?=$member['description']?></td>
                             <td><?=$member['email']?></td>
                             <td><?=$member['image']?></td>
-                            <td class="d-flex">
-                                <a href="#"><i class="bi bi-pencil-square"></i></a>
-                                <a href="#"><i class="bi bi-trash"></i></a>
+                            <td><?=$member['phone']?></td>
+                            <td><?=$member['education']?></td>
+                            <td><?=$member['birthday']?></td>
+                            <td>
+                                <a href="./editmember.php?id=<?=$member['id_member']?>"><i class="bi bi-pencil-square"></i></a>
+                            </td>
+                            <td>
+                                <a href="./delmember.php?id=<?=$member['id_member']?>"><i class="bi bi-trash"></i></a>
                             </td>
                         </tr>
                         <?php

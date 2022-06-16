@@ -6,8 +6,7 @@ if(!empty($_POST['username']) && !empty($_POST['password'])){
         header("location: index.php");
     }
     else{
-        // Gán session = $account
-        header("location: dashboard.php");
+        header("location: member.php");
     }
 }
 else(

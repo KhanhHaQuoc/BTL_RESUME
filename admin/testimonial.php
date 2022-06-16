@@ -16,7 +16,7 @@ $testimonials = getTestimonial();
 </head>
 <body?>
     <div class="d-flex">
-        <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px; height:100vh;">
+        <div class="d-flex sticky-top flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px; height:100vh;">
             <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
                 <svg class="bi pe-none me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
                 <span class="fs-4">Sidebar</span>
@@ -69,7 +69,7 @@ $testimonials = getTestimonial();
                     <thead class="bg-secondary text-white">
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Full Name</th>
+                            <th scope="col">FullName</th>
                             <th scope="col">Work</th>
                             <th scope="col">Quotes</th>
                             <th scope="col">Picture</th>

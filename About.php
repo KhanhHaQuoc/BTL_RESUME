@@ -1,3 +1,8 @@
+<?php
+include "./function.php";
+
+$members = getMembersInfo();
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -29,50 +34,33 @@
 </header>
 
  <div class="intro">
-     <div class="container-fluid block-1 py-2">
-         <div class="container">
-             <div class="row align-items-center justify-content-between">
-                 <div class="col-12 col-sm-5">
-                   
-                         <p class="text-center intro-text">So, who we are?</p>
-                         <p class="text-center fw-light fs-5 mt-5">We are your new social media bestie. Our mission is to help small and medium-sized businesses grow their audience and brand recognition through social media. Our goal is to help you understand the power of social media and create connections that go beyond the internet.</p>
+        <div class="container-fluid block-1 py-2">
+                <div class="container-fluid">
+                    <?php
+                    foreach ($members as $member) {
+                    ?>
+                    <div class="row align-items-center justify-content-between mb-5">
+                        <div class="col-12 col-sm-4">
+                            <img class="img-fluid mb-3" src="<?= $member['image'] ?>" alt="">
+                        </div> 
+                        <div class="col-12 col-sm-6">
+                        
+                                <p class=" intro-text">Họ và Tên: <?= $member['fullname'] ?></p>
+                                <p class="fw-light fs-5 mt-1">Ngày sinh: <?= $member['birthday'] ?></p>
+                                <p class="fw-light fs-5 mt-1">Học vấn: <?= $member['education'] ?></p>
+                                <p class="fw-light fs-5 mt-1">Email: <?= $member['email'] ?></p>
+                                <p class="fw-light fs-5 mt-1">Điện thoại: <?= $member['phone'] ?></p>
+                                <p class="fw-light fs-5 mt-1">Giới thiệu: <?= $member['description'] ?></p>
 
-                    <a href="./Contact.php" class="btn btn-dark btn-lg mt-5 mb-5">Contact me</a></div>
-
-                 <div class="col-12 col-sm-5">
-                     <img class="img-fluid" src="./image/khanh.jpg" alt="">
-                 </div>
-             </div>
-         </div>
+                            <a href="./Contact.php?id=<?= $member['id_member'] ?>" class="btn btn-dark btn-lg mt-5">Contact me</a></div>
+                    </div>
+                    <?php
+                    }
+                    ?>
+                </div>
+            </div>
      </div>
-     
-     <div class="container-fluid block-2 py-2">
-         <div class="container">
-             <div class="row align-items-center">
-                 <div class="col-12 col-sm-3 text-center fs-1">Facebook</div>
-                 <div class="col-12 col-sm-3 text-center fs-1">Twitter</div>
-                 <div class="col-12 col-sm-3 text-center fs-1">YouTube</div>
-                 <div class="col-12 col-sm-3 text-center fs-1">Instagram</div>
-             </div>
-         </div>
-     </div>
-     
-     <div class="container-fluid block-1 py-2">
-         <div class="container">
-             <div class="row align-items-center justify-content-between">
-                 <div class="col-12 col-sm-5">
-                   
-                         <p class="text-center intro-text">What we do</p>
-                         <p class="text-center fw-light fs-5 mt-5">When it comes to social media marketing, MIKHA is my #1 go-to website. If you’re serious about your business, you need MIKHA</p>
-
-                    <a href="./Contact.php" class="btn btn-dark btn-lg mt-5 mb-5">Contact me</a></div>
-
-                 <div class="col-12 col-sm-5">
-                     <img class="img-fluid" src="./image/minh.jpg" alt="">
-                 </div>
-             </div>
-         </div>
-     </div>
+       
 
      <div class="container-fluid block-2 py-2">
          <div class="container">
