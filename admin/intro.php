@@ -9,7 +9,7 @@ $intros = getIntro();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Intro</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css"> 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
@@ -17,9 +17,9 @@ $intros = getIntro();
 <body?>
     <div class="d-flex">
         <div class="d-flex sticky-top flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px; height:100vh;">
-            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+            <a href="./dashboard.php" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
                 <svg class="bi pe-none me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
-                <span class="fs-4">Sidebar</span>
+                <span class="fs-4">Admin</span>
             </a>
             <ul class="nav nav-pills flex-column mb-auto py-4">
                 <li class="nav-item">
@@ -50,7 +50,7 @@ $intros = getIntro();
             </ul>
             <div class="dropdown">
                 <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+                    <img src="../image/admin.jpg" alt="" width="32" height="32" class="rounded-circle me-2">
                     <strong>Admin</strong>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
@@ -72,7 +72,8 @@ $intros = getIntro();
                             <th scope="col">ID</th>
                             <th scope="col">Questions</th>
                             <th scope="col">Answers</th>
-                            <th scope="col"></th>
+                            <th scope="col">Edit</th>
+                            <th scope="col">Delete</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -87,6 +88,8 @@ $intros = getIntro();
                             <td><?=$intro['answers']?></td>
                             <td class="d-flex">
                                 <a href="./editintro.php?id=<?=$intro['id']?>"><i class="bi bi-pencil-square"></i></a>
+                            </td>
+                            <td>
                                 <a href="./delintro.php?id=<?=$intro['id']?>"><i class="bi bi-trash"></i></a>
                             </td>
                         </tr>

@@ -233,6 +233,7 @@ function addIntro($questions, $answers){
 
     // 2. Thực hiện TRUY VẤN
     $sql = "INSERT INTO intro (questions, answers) VALUES ('$questions', '$answers')";
+    echo $sql;
     if(mysqli_query($conn, $sql)){
         //Trường hợp thực hiện lệnh khác SELECT > Kết quả trả về TRUE ko?
         return true;

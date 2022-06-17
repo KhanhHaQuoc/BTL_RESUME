@@ -88,7 +88,7 @@ $intros = getIntro();
                          <p class=" intro-text"><?= $member['fullname'] ?></p>
                          <p class="fw-light fs-5 mt-5"><?= $member['description'] ?></p>
 
-                    <a href="./About.php" class="btn btn-dark btn-lg mt-5">About us</a></div>
+                    <a href="./About.php" class="btn btn-dark btn-lg mt-5 mb-5">About us</a></div>
              </div>
             <?php
             }
@@ -126,7 +126,7 @@ $intros = getIntro();
                          <p class=" intro-text">Our Blog</p>
                          <p class="fw-light fs-5 mt-5"> We will let you in on some trade secrets and share my top tips on how to successfully promote your brand online.</p>
 
-                    <a href="./Blog.php" class="btn btn-dark btn-lg mt-5">Read Blog</a></div>
+                    <a href="./Blog.php" class="btn btn-dark btn-lg mt-5 mb-5">Read Blog</a></div>
 
                  <div class="col-12 col-sm-5">
                      <img class="img-fluid" src="./image/blog.webp" alt="">

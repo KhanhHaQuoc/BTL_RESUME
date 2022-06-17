@@ -49,7 +49,7 @@
                                     <!-- <input type="text" class="form-control" id="floatingPassword2" name="txtMessage" placeholder="Password"> -->
                                     <label for="floatingPassword2">Message</label>
                                 </div>
-                                <button name="btnSubmit" class=" btn btn-lg btn-dark" type="submit">Submit</button>
+                                <button name="btnSubmit" class=" btn btn-lg btn-dark mb-5" type="submit">Submit</button>
                             </form>
                         </div>
                         <div class="col-12 col-sm-5">
