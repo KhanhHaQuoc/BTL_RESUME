@@ -64,7 +64,7 @@ $contacts = getContact();
                 <h5>
                     Contact Manage
                 </h5>
-                <a href="" class="btn btn-secondary my-2" >Add a new Contact</a>
+                <a href="./addcontact.php" class="btn btn-secondary my-2" >Add a new Contact</a>
                 <table class="table">
                     <thead class="bg-secondary text-white">
                         <tr>
@@ -86,8 +86,8 @@ $contacts = getContact();
                             <td><?=$contact['email']?></td>
                             <td><?=$contact['messages']?></td>
                             <td class="d-flex">
-                                <a href="#"><i class="bi bi-pencil-square"></i></a>
-                                <a href="#"><i class="bi bi-trash"></i></a>
+                                <a href="./editcontact.php?id=<?=$contact['id']?>"><i class="bi bi-pencil-square"></i></a>
+                                <a href="./delcontact.php?id=<?=$contact['id']?>"><i class="bi bi-trash"></i></a>
                             </td>
                         </tr>
                         <?php

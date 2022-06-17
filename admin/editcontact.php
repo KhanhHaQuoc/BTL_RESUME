@@ -1,6 +1,31 @@
-<?php
-include "function.php";
-$intros = getIntro();
+<?php 
+    include('function.php'); //cho thằng này hiểu dược addPost là gì
+
+    if(isset($_GET['id']) && !empty($_GET['id'])){
+        $id= $_GET['id'];
+    }
+
+    $contact = getContactByID($id);
+
+
+    if(isset($_POST['btnSave'])){
+        if(!empty($_POST['full_name']) && !empty($_POST['email']) && !empty($_POST['messages'])){
+            $full_name = $_POST['full_name'];
+            $email = $_POST['email'];
+            $messages = $_POST['messages'];
+           
+            
+            if(editContact($id, $full_name, $email,$messages)){
+                header("location: contact.php");
+            }else{
+                echo "<h3 class='bg-dark text-white'>Không thành công</h3>";
+            }
+            
+        }else{
+            echo "<h3 class='bg-dark text-white'>Bạn chưa nhập dữ liệu</h3>";
+        }
+    }
+
 ?>
 
 <!DOCTYPE html>
@@ -38,12 +63,12 @@ $intros = getIntro();
                     </a>
                 </li>
                 <li>
-                    <a href="./contact.php" class="nav-link text-white">
+                    <a href="./contact.php" class="nav-link text-white active">
                     Contact
                     </a>
                 </li>
                 <li>
-                    <a href="./intro.php" class="nav-link active">
+                    <a href="./intro.php" class="nav-link text-white ">
                     Intro
                     </a>
                 </li>
@@ -58,47 +83,38 @@ $intros = getIntro();
                 </ul>
             </div>
         </div>
-        <div  class="container-fluid">
-        <div class="flex-grow-1">
-            <div class="p-5">
-                <h5>
-                    Intro Manage
-                </h5>
-                <a href="./addintro.php" class="btn btn-secondary my-2" >Add a new intro</a>
-                <table class="table">
-                    <thead class="bg-secondary text-white">
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">ID</th>
-                            <th scope="col">Questions</th>
-                            <th scope="col">Answers</th>
-                            <th scope="col"></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php
-                        $index=1;
-                        foreach ($intros as $intro) {
-                        ?>
-                        <tr>
-                            <th scope="row"><?= $index ?></th>
-                            <td><?=$intro['id']?></td>
-                            <td><?=$intro['questions']?></td>
-                            <td><?=$intro['answers']?></td>
-                            <td class="d-flex">
-                                <a href="./editintro.php?id=<?=$intro['id']?>"><i class="bi bi-pencil-square"></i></a>
-                                <a href="./delintro.php?id=<?=$intro['id']?>"><i class="bi bi-trash"></i></a>
-                            </td>
-                        </tr>
-                        <?php
-                            $index++;
-                        }
-                        ?>
-                    </tbody>
-                </table>
+        
+        <div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <form action="editcontact.php?id=<?=$contact['id']?>" method="POST">
+                <div class="card" style="width: 100%">
+                    <div class="card-header">Edit Contact</div>
+                    <div class="card-body">
+                        <div class="form-group mb-2">
+                            <label for="fullname">Full Name</label>
+                            <input type="text" class="form-control" name="full_name" id="full_name" value="<?=$contact['full_name']?>">
+                        </div>
+                    
+                        <div class="form-group mb-2">
+                            <label for="email">Email</label>
+                            <input type="text" class="form-control" name="email" id="email" value="<?=$contact['email']?>">
+                        </div>
+                        <div class="form-group mb-2">
+                            <label for="messages">Messages</label>
+                            <input type="text" class="form-control" name="messages" id="messages" value="<?=$contact['messages']?>">
+                        </div>
+                    
+                        <div class="form-group mt-3">
+                            <button type="submit" name="btnSave" class="btn btn-primary w-25">Save</button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
-        </div>
     </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>

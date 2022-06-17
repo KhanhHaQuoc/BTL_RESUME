@@ -64,7 +64,7 @@ $posts = getPosts();
                 <h5>
                     Blog Manage
                 </h5>
-                <a href="" class="btn btn-secondary my-2" >Add a new blog</a>
+                <a href="addblog.php" class="btn btn-secondary my-2" >Add a new blog</a>
                 <table class="table">
                     <thead class="bg-secondary text-white">
                         <tr>

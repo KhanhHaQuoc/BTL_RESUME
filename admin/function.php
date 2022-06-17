@@ -205,5 +205,175 @@ function delMemberByID($id){
 
     return false;
 }
+function addBlog($title, $description, $body, $picture, $date){
+    // 1. Kết nối tới CSDL
+    $conn = mysqli_connect("localhost","root","", "btl_cv");
+    if(!$conn){
+        die("Không thể kết nối tới DB Server");
+    }
 
+    // 2. Thực hiện TRUY VẤN
+    $sql = "INSERT INTO post (post_title, post_description, post_body, post_picture, post_date) VALUES ('$title', '$description', '$body', '$picture', '$date')";
+    if(mysqli_query($conn, $sql)){
+        //Trường hợp thực hiện lệnh khác SELECT > Kết quả trả về TRUE ko?
+        return true;
+    }else{
+        return false;
+    }
+
+    // 3. Dong ket noi
+    mysqli_close($conn);
+}
+function addIntro($questions, $answers){
+    // 1. Kết nối tới CSDL
+    $conn = mysqli_connect("localhost","root","", "btl_cv");
+    if(!$conn){
+        die("Không thể kết nối tới DB Server");
+    }
+
+    // 2. Thực hiện TRUY VẤN
+    $sql = "INSERT INTO intro (questions, answers) VALUES ('$questions', '$answers')";
+    if(mysqli_query($conn, $sql)){
+        //Trường hợp thực hiện lệnh khác SELECT > Kết quả trả về TRUE ko?
+        return true;
+    }else{
+        return false;
+    }
+
+    // 3. Dong ket noi
+    mysqli_close($conn);
+}
+function editIntro($id, $questions, $answers){
+    // 1. Kết nối tới CSDL
+    $conn = mysqli_connect("localhost","root","", "btl_cv");
+    if(!$conn){
+        die("Không thể kết nối tới DB Server");
+    }
+
+    // 2. Thực hiện TRUY VẤN
+    $sql = "UPDATE intro SET  questions='$questions',answers='$answers' WHERE (id = '$id')";
+    if(mysqli_query($conn, $sql)){
+        //Trường hợp thực hiện lệnh khác SELECT > Kết quả trả về TRUE ko?
+        return true;
+    }else{
+        return false;
+    }
+
+    // 3. Dong ket noi
+    mysqli_close($conn);
+}
+
+function getIntroByID($id){
+    // 1. Kết nối tới CSDL
+    $conn = mysqli_connect("localhost","root","", "btl_cv");
+    if(!$conn){
+        die("Không thể kết nối tới DB Server");
+    }
+
+    // 2. Thực hiện TRUY VẤN
+    $sql = "SELECT * FROM intro WHERE id = '$id'"; //Vì nó là câu lệnh SELECT
+    //mysqli_query trả về 1 tập kết quả
+    $result = mysqli_query($conn, $sql);
+
+    $rows = mysqli_fetch_assoc($result);
+        //Lấy ra từng bản ghi từ TẬP KẾT QUẢ và lưu tạm vào $row
+    // 3. Dong ket noi
+    mysqli_close($conn);
+    return $rows; //Trả về 1 mảng
+
+}
+function delIntroByID($id){
+    // 1. Kết nối tới CSDL
+    $conn = mysqli_connect("localhost","root","", "btl_cv");
+    if(!$conn){
+        die("Không thể kết nối tới DB Server");
+    }
+
+    // 2. Thực hiện TRUY VẤN
+    $sql = "DELETE FROM intro WHERE id = '$id'"; 
+    //mysqli_query trả về 1 tập kết quả
+    $result = mysqli_query($conn, $sql);
+
+    if($result) {
+        return true;
+    }
+
+    return false;
+}
+function addContact($full_name, $email, $messages){
+    // 1. Kết nối tới CSDL
+    $conn = mysqli_connect("localhost","root","", "btl_cv");
+    if(!$conn){
+        die("Không thể kết nối tới DB Server");
+    }
+
+    // 2. Thực hiện TRUY VẤN
+    $sql = "INSERT INTO contact (full_name,email,messages) VALUES ('$full_name','$email', '$messages')";
+    if(mysqli_query($conn, $sql)){
+        //Trường hợp thực hiện lệnh khác SELECT > Kết quả trả về TRUE ko?
+        return true;
+    }else{
+        return false;
+    }
+
+    // 3. Dong ket noi
+    mysqli_close($conn);
+}
+function editContact($id,$full_name,$email, $messages){
+    // 1. Kết nối tới CSDL
+    $conn = mysqli_connect("localhost","root","", "btl_cv");
+    if(!$conn){
+        die("Không thể kết nối tới DB Server");
+    }
+
+    // 2. Thực hiện TRUY VẤN
+    $sql = "UPDATE contact SET  full_name='$full_name',email='$email', messages ='$messages' WHERE (id = '$id')";
+    if(mysqli_query($conn, $sql)){
+        //Trường hợp thực hiện lệnh khác SELECT > Kết quả trả về TRUE ko?
+        return true;
+    }else{
+        return false;
+    }
+
+    // 3. Dong ket noi
+    mysqli_close($conn);
+}
+
+function getContactByID($id){
+    // 1. Kết nối tới CSDL
+    $conn = mysqli_connect("localhost","root","", "btl_cv");
+    if(!$conn){
+        die("Không thể kết nối tới DB Server");
+    }
+
+    // 2. Thực hiện TRUY VẤN
+    $sql = "SELECT * FROM contact WHERE id = '$id'"; //Vì nó là câu lệnh SELECT
+    //mysqli_query trả về 1 tập kết quả
+    $result = mysqli_query($conn, $sql);
+
+    $rows = mysqli_fetch_assoc($result);
+        //Lấy ra từng bản ghi từ TẬP KẾT QUẢ và lưu tạm vào $row
+    // 3. Dong ket noi
+    mysqli_close($conn);
+    return $rows; //Trả về 1 mảng
+
+}
+function delContactByID($id){
+    // 1. Kết nối tới CSDL
+    $conn = mysqli_connect("localhost","root","", "btl_cv");
+    if(!$conn){
+        die("Không thể kết nối tới DB Server");
+    }
+
+    // 2. Thực hiện TRUY VẤN
+    $sql = "DELETE FROM contact WHERE id = '$id'"; 
+    //mysqli_query trả về 1 tập kết quả
+    $result = mysqli_query($conn, $sql);
+
+    if($result) {
+        return true;
+    }
+
+    return false;
+}
 ?>

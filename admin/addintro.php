@@ -1,6 +1,23 @@
-<?php
-include "function.php";
-$intros = getIntro();
+<?php 
+    include('function.php'); //cho thằng này hiểu dược addPost là gì
+
+    if(isset($_POST['btnSave'])){
+        if(!empty($_POST['txtQuestions']) && !empty($_POST['txtAnswers'])){
+            $questions = $_POST['txtQuestions'];
+            $answers = $_POST['txtAnswers'];
+
+                      
+            if(addIntro( $questions, $answers)){
+                header("location: intro.php");
+            }else{
+                echo "<h3 class='bg-dark text-white'>Không thành công</h3>";
+            }
+            
+        }else{
+            echo "<h3 class='bg-dark text-white'>Bạn chưa nhập dữ liệu</h3>";
+        }
+    }
+
 ?>
 
 <!DOCTYPE html>
@@ -23,7 +40,7 @@ $intros = getIntro();
             </a>
             <ul class="nav nav-pills flex-column mb-auto py-4">
                 <li class="nav-item">
-                    <a href="./member.php" class="nav-link text-white" aria-current="page">
+                    <a href="./intro.php" class="nav-link text-white" aria-current="page">
                     Members
                     </a>
                 </li>
@@ -58,47 +75,32 @@ $intros = getIntro();
                 </ul>
             </div>
         </div>
-        <div  class="container-fluid">
-        <div class="flex-grow-1">
-            <div class="p-5">
-                <h5>
-                    Intro Manage
-                </h5>
-                <a href="./addintro.php" class="btn btn-secondary my-2" >Add a new intro</a>
-                <table class="table">
-                    <thead class="bg-secondary text-white">
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">ID</th>
-                            <th scope="col">Questions</th>
-                            <th scope="col">Answers</th>
-                            <th scope="col"></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php
-                        $index=1;
-                        foreach ($intros as $intro) {
-                        ?>
-                        <tr>
-                            <th scope="row"><?= $index ?></th>
-                            <td><?=$intro['id']?></td>
-                            <td><?=$intro['questions']?></td>
-                            <td><?=$intro['answers']?></td>
-                            <td class="d-flex">
-                                <a href="./editintro.php?id=<?=$intro['id']?>"><i class="bi bi-pencil-square"></i></a>
-                                <a href="./delintro.php?id=<?=$intro['id']?>"><i class="bi bi-trash"></i></a>
-                            </td>
-                        </tr>
-                        <?php
-                            $index++;
-                        }
-                        ?>
-                    </tbody>
-                </table>
+        
+        <div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <form action="addintro.php" method="POST">
+                <div class="card" style="width: 100%">
+                    <div class="card-header">Add Intro</div>
+                    <div class="card-body">
+                        <div class="form-group mb-2">
+                            <label for="questions">Questions </label>
+                            <textarea name="txtQuestions" id="txtQuestions" style="height: 100px" class="form-control"></textarea>
+                        </div>
+                        <div class="form-group mb-2">
+                            <label for="answers">Answers</label>
+                            <textarea name="txtAnswers" id="txtAnswers" style="height: 100px" class="form-control"></textarea>
+                        </div>
+                        <div class="form-group mt-3">
+                            <button type="submit" name="btnSave" class="btn btn-primary w-25">Save</button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
-        </div>
     </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
