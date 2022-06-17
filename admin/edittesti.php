@@ -10,13 +10,13 @@
 
     if(isset($_POST['btnSave'])){
         if(!empty($_POST['full_name']) && !empty($_POST['work']) && !empty($_POST['quotes']) && !empty($_POST['picture'])){
-            $fullname = $_POST['fullname'];
+            $full_name = $_POST['full_name'];
             $work = $_POST['work'];
             $quotes = $_POST['quotes'];
             $picture = "./image/" . $_POST['picture'];
           
             
-            if(editMember($id, $full_name, $work, $email, $quotes, $picture)){
+            if(editTesti($id, $full_name, $work, $quotes, $picture)){
                 header("location: testimonial.php");
             }else{
                 echo "<h3 class='bg-dark text-white'>Không thành công</h3>";
@@ -35,7 +35,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit a member</title>
+    <title>Edit a Testimonial</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css"> 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
@@ -101,8 +101,8 @@
                             <input type="text" class="form-control" name="work" id="work" value="<?=$testi['work']?>">
                         </div>
                         <div class="form-group mb-2">
-                            <label for="work">work</label>
-                            <input type="text" class="form-control" name="work" id="work" value="<?=$testi['work']?>">
+                            <label for="quotes">Quotes</label>
+                            <input type="text" class="form-control" name="quotes" id="quotes" value="<?=$testi['quotes']?>">
                         </div>
                         <div class="form-group mb-2">
                             <label for="picture">picture</label>

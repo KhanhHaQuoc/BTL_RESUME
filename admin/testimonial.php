@@ -23,7 +23,7 @@ $testimonials = getTestimonial();
             </a>
             <ul class="nav nav-pills flex-column mb-auto py-4">
                 <li class="nav-item">
-                    <a href="#" class="nav-link text-white" aria-current="page">
+                    <a href="./member.php" class="nav-link text-white" aria-current="page">
                     Members
                     </a>
                 </li>
@@ -89,10 +89,10 @@ $testimonials = getTestimonial();
                             <td><?= $testimonial['quotes'] ?></td>
                             <td><?= $testimonial['picture'] ?></td>
                             <td>
-                                <a href="./edittesti.php?id=<?=$testi['id']?>"><i class="bi bi-pencil-square"></i></a>
+                                <a href="./edittesti.php?id=<?=$testimonial['id']?>"><i class="bi bi-pencil-square"></i></a>
                             </td>
                             <td>
-                                <a href=""><i class="bi bi-trash"></i></a>
+                                <a href="./deltesti.php?id=<?=$testimonial['id']?>"><i class="bi bi-trash"></i></a>
                             </td>
                         </tr>
                         <?php

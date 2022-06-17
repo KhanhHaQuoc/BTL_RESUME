@@ -443,7 +443,7 @@ function addTesti( $full_name, $work, $quotes, $picture ){
     }
 
     // 2. Thực hiện TRUY VẤN
-    $sql = "INSERT INTO testimonials (full_name, work, quotes, picture) VALUES ('$full_name', $work', '$quotes', '$picture')";
+    $sql = "INSERT INTO testimonials(full_name, work, quotes, picture) VALUES ('$full_name', '$work', '$quotes', '$picture')";
     echo $sql;
     if(mysqli_query($conn, $sql)){
         //Trường hợp thực hiện lệnh khác SELECT > Kết quả trả về TRUE ko?

@@ -91,10 +91,10 @@ $posts = getPosts();
                             <td><?=$post['date']?></td>
                             <td><?=$post['picture']?></td>
                             <td>
-                                <a href="./editblog.php?id=<?=$blog['id']?>"><i class="bi bi-pencil-square"></i></a>
+                                <a href="./editblog.php?id=<?=$post['id']?>"><i class="bi bi-pencil-square"></i></a>
                             </td>
                             <td>
-                                <a href="./delblog.php?id=<?=$blog['id']?>"><i class="bi bi-trash"></i></a>
+                                <a href="./delblog.php?id=<?=$post['id']?>"><i class="bi bi-trash"></i></a>
                             </td>
                         </tr>
                         <?php

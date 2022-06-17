@@ -64,7 +64,7 @@ $contacts = getContact();
                 <h5>
                     Contact Manage
                 </h5>
-                <a href="./addcontact.php" class="btn btn-secondary my-2" >Add a new Contact</a>
+                <a href="./addcontact.php" class="btn btn-secondary my-2" >Add a new contact</a>
                 <table class="table">
                     <thead class="bg-secondary text-white">
                         <tr>
