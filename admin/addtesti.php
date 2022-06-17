@@ -1,6 +1,26 @@
-<?php
-include "function.php";
-$posts = getPosts();
+<?php 
+    include('function.php'); //cho thằng này hiểu dược addPost là gì
+
+    if(isset($_POST['btnSave'])){
+        if(!empty($_POST['full_name']) && !empty($_POST['work']) && !empty($_POST['quotes']) && !empty($_POST['picture'])){
+            $full_name = $_POST['full_name'];
+            $work = $_POST['work'];
+            $quotes = $_POST['quotes'];
+            $picture = "./image/" .$_POST['picture'];
+        
+            
+            
+            if(addTesti($full_name, $work, $quotes, $picture)){
+                header("location: testimonial.php");
+            }else{
+                echo "<h3 class='bg-dark text-white'>Không thành công</h3>";
+            }
+            
+        }else{
+            echo "<h3 class='bg-dark text-white'>Bạn chưa nhập dữ liệu</h3>";
+        }
+    }
+
 ?>
 
 <!DOCTYPE html>
@@ -9,7 +29,7 @@ $posts = getPosts();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
+    <title>Add a new member</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css"> 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
@@ -28,12 +48,12 @@ $posts = getPosts();
                     </a>
                 </li>
                 <li>
-                    <a href="./blog.php" class="nav-link active">
+                    <a href="./blog.php" class="nav-link text-white">
                     Blog
                     </a>
                 </li>
                 <li>
-                    <a href="./testimonial.php" class="nav-link text-white">
+                    <a href="./testimonial.php" class="nav-link  active">
                     Testimonials
                     </a>
                 </li>
@@ -58,54 +78,40 @@ $posts = getPosts();
                 </ul>
             </div>
         </div>
-        <div  class="container-fluid">
-        <div class="flex-grow-1">
-            <div class="p-5">
-                <h5>
-                    Blog Manage
-                </h5>
-                <a href="addblog.php" class="btn btn-secondary my-2" >Add a new blog</a>
-                <table class="table">
-                    <thead class="bg-secondary text-white">
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Title</th>
-                            <th scope="col">Decription</th>
-                            <th scope="col">Body</th>
-                            <th scope="col">Date</th>
-                            <th scope="col">Picture</th>
-                            <th scope="col">Edit</th>
-                            <th scope="col">Delete</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php
-                        $index=1;
-                        foreach ($posts as $post) {
-                        ?>
-                        <tr>
-                            <th scope="row"><?= $index ?></th>
-                            <td><?=$post['title']?></td>
-                            <td><?=$post['description']?></td>
-                            <td><?=$post['body']?></td>
-                            <td><?=$post['date']?></td>
-                            <td><?=$post['picture']?></td>
-                            <td>
-                                <a href="./editblog.php?id=<?=$blog['id']?>"><i class="bi bi-pencil-square"></i></a>
-                            </td>
-                            <td>
-                                <a href="./delblog.php?id=<?=$blog['id']?>"><i class="bi bi-trash"></i></a>
-                            </td>
-                        </tr>
-                        <?php
-                            $index++;
-                        }
-                        ?>
-                    </tbody>
-                </table>
+        
+        <div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <form action="addTesti.php" method="POST">
+                <div class="card" style="width: 100%">
+                    <div class="card-header">Add Testimonial</div>
+                    <div class="card-body">
+                        <div class="form-group mb-2">
+                            <label for="full_name">Full Name</label>
+                            <input type="text" class="form-control" name="full_name" id="full_name">
+                        </div>
+                        <div class="form-group mb-2">
+                            <label for="work">Work</label>
+                            <input type="text" class="form-control" name="work" id="work">
+                        </div>
+                        <div class="form-group mb-2">
+                            <label for="quotes">Quotes</label>
+                            <input type="text" class="form-control" name="quotes" id="quotes">
+                        </div>
+                        <div class="form-group mb-2">
+                            <label for="picture">Picture</label>
+                            <input type="file" class="form-control" name="picture" id="picture">
+                        </div>
+                        <div class="form-group mt-3">
+                            <button type="submit" name="btnSave" class="btn btn-primary w-25">Save</button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
-        </div>
     </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
