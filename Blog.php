@@ -37,16 +37,16 @@
     foreach($posts as $post){
     ?>
     <div class="col-12 col-md-6">
-      <div class="card">
+      <div class="card mb-3">
           <a href="post.php?id=<?=$post['id']?>">
-            <img src="<?=$post['post_picture']?>" class="card-img-top img-fluid" alt="...">
+            <img src="<?=$post['picture']?>" class="card-img-top img-fluid" alt="...">
           </a>
           <div class="card-body">
             <h5 class="card-title">
-                <a class="text-decoration-none text-secondary" href="post.php?id=<?=$post['id']?>"><?=$post['post_title']?></a>
+                <a class="text-decoration-none text-secondary" href="post.php?id=<?=$post['id']?>"><?=$post['title']?></a>
             </h5>
-            <p class="card-text"><?=$post['post_description']?></p>
-            <p><?=$post['post_date']?></p>
+            <p class="card-text"><?=$post['description']?></p>
+            <p><?=$post['date']?></p>
           </div>
         </div>
     </div>

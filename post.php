@@ -43,14 +43,14 @@
         <div class="col-md-8 mx-auto ">
             <div>
                 <div class="text-center">
-                    <img class="img-fluid" src="<?php echo $post['post_picture'];?>" alt="">
+                    <img class="img-fluid" src="<?php echo $post['picture'];?>" alt="">
                 </div>
                 <h5 class="fs-1 mt-2 mb-3">
-                    <?php echo $post['post_title'];?>
+                    <?php echo $post['title'];?>
                 </h5>
-                <p class="fs-2 fst-italic"><?php echo $post['post_description'];?></p>
-                <p class=" fst-italic"><?php echo $post['post_date'];?></p>
-                <p><?php echo $post['post_body'];?></p>
+                <p class="fs-2 fst-italic"><?php echo $post['description'];?></p>
+                <p class=" fst-italic"><?php echo $post['date'];?></p>
+                <p><?php echo $post['body'];?></p>
             </div>
         </div>
     </div>
